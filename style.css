@@ -19,6 +19,15 @@ section {
     justify-items: center;
 }
 
-img {
-    max-height: 25vh;
+div {
+    position: relative;
+    min-width: 200px;
+    min-height: 300px;
+}
+
+img[id^="dino"] {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

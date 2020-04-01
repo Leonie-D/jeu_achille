@@ -9,7 +9,9 @@ function drag(ev) {
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    this.appendChild(document.getElementById(data));
+    console.log(data);
+    console.log(ev.target);
 };
 
 const dinosaures = Array.from(document.querySelectorAll('.dino img'));
@@ -24,3 +26,5 @@ for (let ombre of ombres) {
     ombre.addEventListener('drop', drop);
     ombre.addEventListener('dragover', allowDrop);
 };
+
+// il faudra ajouter un controle pour vérifier la bonne association !!

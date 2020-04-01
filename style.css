@@ -1,0 +1,24 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+img {
+    max-height: 25vh;
+}

@@ -6,6 +6,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1>Retrouve l'ombre de chaque dinosaure</h1>
+
+    <!-- Un block autour de chaque image
+    Seules les images colorées sont draggables
+    Seules les ombres sont ok pour drop
+    Z-index 1 + position relative sur les images colorées pour qu'elles viennent par dessus les ombres dans une flex-box où tout est centré -->
+
+    <div class="dino" id="dino1">
+        <img src="img/tricer-col.png" alt="tricerator couleur">
+    </div>
+    <div class="dino" id="dino2">
+        <img src="img/dino-col.png" alt="dinosaure couleur">
+    </div>
+    <div class="dino" id="dino3">
+        <img src="img/trex-col.png" alt="tyranosaure couleur">
+    </div>
+    <div class="ombre" id="ombre1">
+        <img src="img/dino-nb.png" alt="dinosaure noir et blanc">
+    </div>
+    <div class="ombre" id="ombre4">
+        <img src="img/trex-nb.png" alt="tyranosaure noir et blanc">
+    </div>
+    <div class="ombre" id="ombre3">
+        <img src="img/tricer-nb.png" alt="tricerator noir et blanc">
+    </div>
+
     <script src="jeu.js"></script>
 </body>
 </html>

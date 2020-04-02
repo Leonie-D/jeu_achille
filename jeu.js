@@ -33,6 +33,19 @@ for (let ombre of ombres) {
     ombre.addEventListener('dragover', allowDrop);
 };
 
-// il faudra ajouter un controle pour vérifier la bonne association !!
+const origine = Array.from(document.querySelectorAll('.dino'));
+const again = document.getElementById('again');
+again.addEventListener('click', recommencer);
 
-// écrire la fonction associée au bouton pour recommencer la partie
+function recommencer() {
+    for (let dino of dinosaures) {
+        if (dino.parentNode.id.slice(0,5) === 'ombre') {
+            dino.parentNode.removeChild(dino);
+            for (let place of origine) {
+                if (place.childElementCount === 0) {
+                    place.appendChild(dino);
+                };
+            };
+        };  
+    };
+};

@@ -6,8 +6,17 @@ function allowDrop(ev) {
         ev.preventDefault();
     } else if (this.id === "ombre2" && data === "dino3"){
         ev.preventDefault();
+    } else {
+        document.getElementById(data).animate([
+            // keyframes
+            { transform: 'rotate(5deg)' },
+            { transform: 'rotate(-5deg)' }
+          ], { 
+            // timing options
+            duration: 2,
+            iterations: 5
+          });
     };
-    // idéalement un else avec élément draggable qui "frissone"
 };
 
 function drag(ev) {

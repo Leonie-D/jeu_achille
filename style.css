@@ -3,12 +3,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    margin: 0;
+}
+
+body::after {
+    content: '';
+    background-image: url(img/jungle.jpg);
+    background-size: cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 h1 {
     font-family: sans-serif;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 3rem;
 }
 
 section {

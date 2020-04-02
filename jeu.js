@@ -1,5 +1,13 @@
 function allowDrop(ev) {
-    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (this.id === "ombre3" && data === "dino1"){
+        ev.preventDefault();
+    } else if (this.id === "ombre1" && data === "dino2"){
+        ev.preventDefault();
+    } else if (this.id === "ombre2" && data === "dino3"){
+        ev.preventDefault();
+    };
+    // idéalement un else avec élément draggable qui "frissone"
 };
 
 function drag(ev) {
@@ -10,8 +18,6 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     this.appendChild(document.getElementById(data));
-    console.log(data);
-    console.log(ev.target);
 };
 
 const dinosaures = Array.from(document.querySelectorAll('.dino img'));
@@ -28,3 +34,5 @@ for (let ombre of ombres) {
 };
 
 // il faudra ajouter un controle pour vérifier la bonne association !!
+
+// écrire la fonction associée au bouton pour recommencer la partie

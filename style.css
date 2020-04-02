@@ -37,13 +37,17 @@ section {
     justify-items: center;
 }
 
-div {
-    position: relative;
-    min-width: 200px;
+.dino {
     min-height: 250px;
 }
 
-img[id^="dino"] {
+.ombre {
+    position: relative;
+    min-width: 180px;
+    min-height: 250px;
+}
+
+.ombre img[id^="dino"] {
     z-index: 3;
     position: absolute;
     top: 0;

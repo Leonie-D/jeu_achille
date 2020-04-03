@@ -19,15 +19,31 @@ function allowDrop(ev) {
     };
 };
 
+// function allowTouchDrop(ev) {
+
+// };
+
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 };
+
+// function touchDrag(ev) {
+
+// };
+
+// function moveDrag(ev) {
+
+// };
 
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     this.appendChild(document.getElementById(data));
 };
+
+// function touchDrop(ev) {
+
+// };
 
 // function getDino(ev) {
 //     const dino = this;
@@ -71,6 +87,8 @@ const dinosaures = Array.from(document.querySelectorAll('.dino img'));
 
 for (let dino of dinosaures) {
     dino.addEventListener('dragstart', drag);
+    // dino.addEventListener('touchedown', touchDrag);
+    // dino.addEventListener('touchemove', moveDrag);
     // dino.addEventListener('mousedown', getDino);
 };
 
@@ -79,6 +97,8 @@ const ombres = Array.from(document.querySelectorAll('.ombre'));
 for (let ombre of ombres) {
     ombre.addEventListener('drop', drop);
     ombre.addEventListener('dragover', allowDrop);
+    // ombre.addEventListener('toucheend', touchDrop);
+    // ombre.addEventListener('toucheend', allowTouchDrop);
 };
 
 const origine = Array.from(document.querySelectorAll('.dino'));
